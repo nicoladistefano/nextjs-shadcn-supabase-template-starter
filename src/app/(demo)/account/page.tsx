@@ -10,8 +10,13 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
+import {getUserData} from "@/actions/auth-actions";
 
-export default function AccountPage() {
+export default async function AccountPage() {
+
+  const user = await getUserData();
+    console.log("User",user );
+
   return (
     <ContentLayout title="Account">
       <Breadcrumb>

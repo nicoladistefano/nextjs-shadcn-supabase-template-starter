@@ -7,6 +7,7 @@ import {
   LayoutGrid,
   LucideIcon
 } from "lucide-react";
+import { IconBookmark } from '@tabler/icons-react';
 
 type Submenu = {
   href: string;
@@ -18,7 +19,7 @@ type Menu = {
   href: string;
   label: string;
   active?: boolean;
-  icon: LucideIcon;
+  icon: any;
   submenus?: Submenu[];
 };
 
@@ -61,29 +62,24 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/categories",
           label: "Categories",
-          icon: Bookmark
-        },
-        {
-          href: "/tags",
-          label: "Tags",
-          icon: Tag
+          icon: IconBookmark
         }
       ]
     },
-    {
-      groupLabel: "Settings",
-      menus: [
-        {
-          href: "/users",
-          label: "Users",
-          icon: Users
-        },
-        {
-          href: "/account",
-          label: "Account",
-          icon: Settings
-        }
-      ]
-    }
+    // {
+    //   groupLabel: "Settings",
+    //   menus: [
+    //     {
+    //       href: "/users",
+    //       label: "Users",
+    //       icon: Users
+    //     },
+    //     {
+    //       href: "/account",
+    //       label: "Account",
+    //       icon: Settings
+    //     }
+    //   ]
+    // }
   ];
 }

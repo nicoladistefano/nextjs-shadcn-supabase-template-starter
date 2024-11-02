@@ -10,8 +10,9 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
+import {getUserData} from "@/actions/auth-actions";
 
-export default function PostsPage() {
+export default async function PostsPage() {
   return (
     <ContentLayout title="All Posts">
       <Breadcrumb>
